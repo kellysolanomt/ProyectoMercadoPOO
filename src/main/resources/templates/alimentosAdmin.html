@@ -64,16 +64,16 @@
                         </thead>
                         <tbody>
                             <tr th:each="alimento:${alimentos}">
-                                <th th:text="${alimento.imagen}"></th>
-                                <th scope="row" th:text="${alimento.referencia}"></th>
-                                <th th:text="${alimento.nombre}"></th>
-                                <th th:text="${alimento.precio}"></th>
-                                <th th:text="${alimento.origen}"></th>
-                                <th th:text="${alimento.fechaVencimiento}"></th>
-                                <th th:text="${alimento.listoParaConsumir}"></th>
-                                <th th:text="${alimento.origenAnimal}"></th>
-                                <th></th>
-                                <th></th>
+                                <td><img th:src="@{${'/img/'+ alimento.imagen}}" width="300px"></td>
+                                <td scope="row" th:text="${alimento.referencia}"></td>
+                                <td th:text="${alimento.nombre}"></td>
+                                <td th:text="${alimento.precio}"></td>
+                                <td th:text="${alimento.origen}"></td>
+                                <td th:text="${alimento.fechaVencimiento}"></td>
+                                <td th:text="${alimento.listoParaConsumir}"></td>
+                                <td th:text="${alimento.origenAnimal}"></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
