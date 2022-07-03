@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
 
 /**
  *
@@ -33,16 +32,19 @@ public abstract class Producto {
     private long precio;
     @Column(name="origen")
     private String origen;
+    @Column(name="imagen")
+    private String imagen;
 
-    public Producto() {
-        super();
-    }
-    
-    public Producto(long referencia, String nombre, long precio, String origen) {
+    public Producto(long referencia, String nombre, long precio, String origen, String imagen) {
         this.referencia = referencia;
         this.nombre = nombre;
         this.precio = precio;
         this.origen = origen;
+        this.imagen = imagen;
+    }
+
+    public Producto() {
+        super();
     }
 
     public long getReferencia() {
@@ -77,8 +79,20 @@ public abstract class Producto {
         this.origen = origen;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
     @Override
     public String toString() {
-        return "Producto{" + "referencia=" + referencia + ", nombre=" + nombre + ", precio=" + precio + ", origen=" + origen + '}';
+        return "Producto{" + "referencia=" + referencia + ", nombre=" + nombre + ", precio=" + precio + ", origen=" + origen + ", imagen=" + imagen + '}';
     }
+    
+    
+
+    
 }

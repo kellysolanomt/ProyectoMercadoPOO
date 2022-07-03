@@ -7,6 +7,7 @@ package com.proyecto.proyecto.controller;
 import com.proyecto.proyecto.repository.AlimentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,15 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author kelly
  */
 @Controller
-@RequestMapping("/alimentos")//http:localhost:8080/alimentos
+@RequestMapping("/alimentosAdmin")//http:localhost:8080/alimentos
 public class AlimentoController {
     //se inyecta al controlador el objeto
     @Autowired
     private AlimentoRepository alimentoRepository;
     
     @GetMapping("")
-    public String home(){
-        return "home";
+    public String alimentoAdmin(Model model){
+        model.addAttribute("alimentos", alimentoRepository.findAll());
+        
+        return "alimentosAdmin";
     }
     
     
