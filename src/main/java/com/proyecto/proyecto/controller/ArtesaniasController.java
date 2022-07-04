@@ -51,9 +51,22 @@ public class ArtesaniasController {
 	}
 	
 	@GetMapping("/editarArtesania/{referencia}")
-	public String editarArtesania( @PathVariable long referencia, Artesania artesania ){
+	public String editarArtesania( @PathVariable Long referencia, Model model ){
 		Artesania p= artesaniaRepository.getOne(referencia);
 		logg.info("Objeto Recuperado {}", p);
+		model.addAttribute("artesania",p);
 		return "editarArtesania";
 	}
+	
+	@GetMapping("/borrarArtesania/{referencia}")
+	public String borrarArtesania( @PathVariable Long referencia){
+		Artesania p= artesaniaRepository.getOne(referencia);
+		logg.info("Objeto eliminado {}", p);
+		artesaniaRepository.delete(p);
+		return "redirect:/artesaniasAdmin";
+	}
+	
+	
+	
+	
 }
