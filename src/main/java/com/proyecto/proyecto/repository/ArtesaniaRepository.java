@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface ArtesaniaRepository extends JpaRepository<Artesania, Integer>{
+public interface ArtesaniaRepository extends JpaRepository<Artesania, Long>{
     
 }

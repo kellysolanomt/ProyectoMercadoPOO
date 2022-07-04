@@ -71,8 +71,8 @@
                                 <td th:text="${medicamento.cantidad}"></td>
                                 <td th:text="${medicamento.tipo}"></td>
                                 <td th:text="${medicamento.dosis}"></td>
-                                <td><a href="" class="btn btn-warning">Editar</a></td>
-                                <td><a href="" class="btn btn-danger">Eliminar</a></td>
+                                <td><a th:href="@{/medicamentosAdmin/editarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-warning">Editar</a></td>
+                                <td><a th:href="@{/medicamentosAdmin/borrarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-danger">Eliminar</a></td>
                             </tr>
                         </tbody>
                     </table>

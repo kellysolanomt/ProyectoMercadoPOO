@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tienda ancestral</title>
+
+        <link th:href="@{/css/estilos_medicamentos.css}" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="comunidad.html">Acerca de la comunidad</a>
+                <a href="medicamentos.html">Medicamentos</a>
+                <a href="artesanias.html">Artesanías</a>
+                <a href="alimentos.html">Alimentos</a>
+                <a href="#">Inicia sesión</a>
+            </nav>
+
+            <div class="wave" style="height: 50px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                           style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                      style="stroke: none; fill: rgb(247, 127, 127);"></path>
+                </svg></div>
+        </header>
+        <main>
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">Medicamentos</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img th:src="@{/img/plantaciones.jpg}" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <h3>Una solución natural</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                            velit doloribus laboriosam ut.</p>
+
+                    </div>
+                </div>
+            </section>
+            <section class="portafolio">
+                <div class="contenedor">
+                    <h2 class="titulo">Actualizar medicamento</h2>
+                    
+                    <form th:action="@{/medicamentosAdmin/guardarMedicamento}" method="post">
+                        <input type="hidden" name="referencia" th:value="${medicamento.referencia}">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" th:value="${medicamento.nombre}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput4" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="formGroupExampleInput3" name="precio" th:value="${medicamento.precio}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput3" class="form-label">Origen</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" th:value="${medicamento.origen}">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput8" class="form-label">Imagen url</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Ej: miel.jpg</span>
+                                <input type="text" class="form-control" id="formGroupExampleInput7" name="imagen" th:value="${medicamento.imagen}">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput5" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" th:value="${medicamento.cantidad}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput7" class="form-label">Tipo</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" th:value="${medicamento.tipo}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput6" class="form-label">Dosis</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput5" name="dosis" th:value="${medicamento.dosis}">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </form>
+                </div>
+            </section>
+
+
+            <footer>
+                <div class="contenedor-footer">
+                    <div class="content-foo">
+                        <h4>Teléfono</h4>
+                        <p>13456</p>
+                    </div>
+                    <div class="content-foo">
+                        <h4>Email</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                </div>
+            </footer>
+    </body>
+
+</html>
+

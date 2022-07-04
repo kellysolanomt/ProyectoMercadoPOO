@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface AlimentoRepository extends JpaRepository<Alimento, Integer>{
+public interface AlimentoRepository extends JpaRepository<Alimento, Long>{
     
     
 }

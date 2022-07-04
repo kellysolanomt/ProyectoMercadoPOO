@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -45,4 +46,22 @@ public class MedicamentoController {
         medicamentoRepository.save(medicamento);
         return "redirect:/medicamentosAdmin";
     }
+    
+    @GetMapping("/editarMedicamento/{referencia}")
+    public String editarMedicamento(@PathVariable Long referencia, Model model){
+        Medicamento medi = medicamentoRepository.getOne(referencia);
+        logg.info("Objeto recuperado {}",medi);
+        model.addAttribute("medicamento",medi);
+        return "actualizarMedicamento";
+    }
+    
+    @GetMapping("/borrarMedicamento/{referencia}")
+    public String borrarMedicamento(@PathVariable Long referencia){
+        Medicamento medi = medicamentoRepository.getOne(referencia);
+        logg.info("Objeto eliminado {}",medi);
+        medicamentoRepository.delete(medi);
+        return "redirect:/medicamentosAdmin";
+    }
+    
+    
 }
