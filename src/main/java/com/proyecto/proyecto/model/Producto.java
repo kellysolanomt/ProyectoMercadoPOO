@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 /**
@@ -34,6 +36,11 @@ public abstract class Producto {
     private String origen;
     @Column(name="imagen")
     private String imagen;
+    
+    @ManyToOne()
+    @JoinColumn(name="orden_id")
+    private Orden orden;
+    
 
     public Producto(long referencia, String nombre, long precio, String origen, String imagen) {
         this.referencia = referencia;
