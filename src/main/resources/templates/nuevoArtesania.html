@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda ancestral(Crear Producto)</title>
+    
+    <link th:href="@{/css/estilos.css}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+    <body>
+    <container>
+    <div>
+        <h1>
+           Crear artesanía
+        </h1>
+        <form th:action="@{/artesaniasAdmin/guardarArtesania}" method="post">
+        <div class="mb-3">
+  			<label for="formGroupExampleInput0" class="form-label">Imagen</label>
+  			<div class="input-group mb-3">
+  			<span class="input-group-text" id="basic-addon1">Ej:miel.jpg</span>
+  			<input type="text" class="form-control" id="formGroupExampleInput0" name="imagen" placeholder="Escriba la ruta de la imagen a insertar">
+  			</div>
+		</div>
+        <div class="mb-3">
+  			<label for="formGroupExampleInput" class="form-label">Referencia</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput" name="referencia"placeholder="Referencia">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput2" class="form-label">Nombre</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" placeholder="Ingrese el nombre">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput3" class="form-label">Precio</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput3" name="precio" placeholder="Ingrese el precio">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput4" class="form-label">Origen</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput4" name="origen"placeholder="Ingrese el origen del producto">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput5" class="form-label">Material</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput5" name="material" placeholder="Ingrese el material">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput6" class="form-label">Tipo de fabricación</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput6" name="tipoFabricacion" placeholder="Ingrese el tipo de fabricación">
+		</div>
+		<div class="mb-3">
+  			<label for="formGroupExampleInput7" class="form-label">Color</label>
+  			<input type="text" class="form-control" id="formGroupExampleInput7" name="color" placeholder="Ingrese el color predominante">
+		</div>
+		<button type="submit" class="btn btn-success">Guardar</button>
+		
+        </form>
+    </div>
+    </container>
+    </body>
+</html>
