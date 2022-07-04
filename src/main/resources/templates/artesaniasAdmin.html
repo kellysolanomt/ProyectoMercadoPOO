@@ -65,15 +65,15 @@
                         <tbody>
                             <tr th:each="artesania:${artesanias}">
                                 <td><img th:src="@{${'/img/'+ artesania.imagen}}" width="300px"></td>
-                                <td scope="row" th:number="${artesania.referencia}"></td>
+                                <td scope="row" th:text="${artesania.referencia}"></td>
                                 <td th:text="${artesania.nombre}"></td>
                                 <td th:text="${artesania.precio}"></td>
                                 <td th:text="${artesania.origen}"></td>
                                 <td th:text="${artesania.material}"></td>
                                 <td th:text="${artesania.tipoFabricacion}"></td>
                                 <td th:text="${artesania.color}"></td>
-                                <td><a th:href="@{/artesaniasAdmin/editarArtesania/{referencia} (referencia=artesania.referencia)}" class="btn btn-warning">Editar</a></td>
-                                <td><a href="" class="btn btn-danger">Eliminar</a></td>
+                                <td><a th:href="@{/artesaniasAdmin/editarArtesania/{referencia} (referencia=${artesania.referencia})}" class="btn btn-warning">Editar</a></td>
+                                <td><a th:href="@{/artesaniasAdmin/borrarArtesania/{referencia} (referencia=${artesania.referencia})}" class="btn btn-danger">Eliminar</a></td>
                             </tr>
                         </tbody>
                     </table>
