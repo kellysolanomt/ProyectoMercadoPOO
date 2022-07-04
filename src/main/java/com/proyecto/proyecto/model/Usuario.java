@@ -31,7 +31,9 @@ public abstract class Usuario {
     private String correo;
     @Column(name="contraseña")
     private String contraseña;
-
+    @Column(name="usuario")
+    private String usuario;
+    
     public Usuario() {
         super();
     }
