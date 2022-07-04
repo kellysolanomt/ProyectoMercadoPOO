@@ -5,6 +5,7 @@
 package com.proyecto.proyecto.model;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,6 +28,8 @@ public class Orden {
     private long id;
     @Column(name="fecha_orden")
     private Date fechaOrden;
+    @Column(name="lista_productos")
+    private List<Producto> productos;
     
     @ManyToOne()
     @JoinColumn(name="cliente_id")
@@ -36,15 +39,15 @@ public class Orden {
     @JoinColumn(name="admin_id")
     private Admin admin;
 
-    public Orden(long id, Date fechaOrden, Cliente cliente, Admin admin) {
+    public Orden(long id, Date fechaOrden, List<Producto> productos, Cliente cliente, Admin admin) {
         this.id = id;
         this.fechaOrden = fechaOrden;
+        this.productos = productos;
         this.cliente = cliente;
         this.admin = admin;
     }
 
     public Orden() {
-        super();
     }
 
     public long getId() {
@@ -63,6 +66,14 @@ public class Orden {
         this.fechaOrden = fechaOrden;
     }
 
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+
     public Cliente getCliente() {
         return cliente;
     }
@@ -78,12 +89,10 @@ public class Orden {
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
-    
+
     @Override
     public String toString() {
-        return "Orden{" + "id=" + id + ", fechaOrden=" + fechaOrden + ", cliente=" + cliente + '}';
+        return "Orden{" + "id=" + id + ", fechaOrden=" + fechaOrden + ", productos=" + productos + ", cliente=" + cliente + ", admin=" + admin + '}';
     }
-    
-    
     
 }

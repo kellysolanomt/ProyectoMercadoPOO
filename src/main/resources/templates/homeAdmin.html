@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tienda ancestral</title>
+
+        <!-- comment <link th:href="@{/css/estilos.css}" rel="stylesheet"/>-->
+        <link rel="stylesheet" href="../static/css/estilos.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a th:href="@{/medicamentosAdmin}">Medicamentos</a>
+                <a th:href="@{/artesaniasAdmin}">Artesanías</a>
+                <a th:href="@{/alimentosAdmin}">Alimentos</a>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn"><strong>Usuario</strong></button>
+                    <div class="dropdown-content">
+                        <a><img src="../static/img/perfil.png" height="80" width="80"></a>
+                        <a>User</a>
+                        <a>example@gmail.com</a>
+                        <a th:href="@{/logInAdmin}">Salir</a>
+                    </div>
+                    
+                </div>
+            </nav>
+            <section class="textos-header">
+                <h1>Tienda Ancestral</h1>
+                <h2></h2>
+            </section>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                            style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                      style="stroke: none; fill: rgb(247, 127, 127);"></path>
+                </svg></div>
+        </header>
+        <main>
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">¿Qué es la tienda ancestral?</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="../static/img/embera-choco.jpg" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <h3><span>1</span>¿Por qué lo hacemos?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                            velit doloribus laboriosam ut.</p>
+                        <h3><span>2</span>Los productos que ofrecemos</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                            velit doloribus laboriosam ut.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="clientes contenedor">
+                <h2 class="titulo">Inicie sesión</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="img/carrito1.png" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Usuario</h4>
+                            <button class="button"> <a class="button_a" href="index.html">Ingresar</a></button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Admin-Profile-PNG.png" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Administrador</h4>
+                            <button class="button"> <a class="button_a" href="index.html">Ingresar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <div class="contenedor-footer">
+                <div class="content-foo">
+                    <h4>Teléfono</h4>
+                    <p>13456</p>
+                </div>
+                <div class="content-foo">
+                    <h4>Email</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+            </div>
+
+        </footer>
+    </body>
+
+</html>

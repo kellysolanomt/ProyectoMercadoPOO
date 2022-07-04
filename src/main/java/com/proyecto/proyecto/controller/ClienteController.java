@@ -27,4 +27,9 @@ public class ClienteController {
         model.addAttribute("cliente", clienteRepository.findAll());
         return "";
     }
+    
+    @GetMapping("/iniciarSesion")
+    public String iniciarSesion(){
+        return "logInUsuario";
+    }
 }

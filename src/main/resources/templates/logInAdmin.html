@@ -7,7 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Tienda ancestral</title>
         <link th:href="@{/css/estilos_login.css}" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+        <script th:src="@{/js/js.js}"></script>
     </head>
 
     <body>
@@ -23,18 +24,16 @@
                 <h2 class="titulo">Inicie sesión</h2>
                 <div class="cards">
                     <div class="card_login">
-                        <img th:src="@{/img/carrito1.png}" alt="">
-                        <div class="contenido-texto-card">
-                            <h4>Ingrese su Usuario</h4>
-                            <input type="text" id="name" name="name" required
-                                   minlength="0" maxlength="15" size="20">
-                            <h4>Contraseña</h4>
-                            <input type="password" id="name" name="name" required
-                                   minlength="0" maxlength="25" size="20">
-
-                        </div>
-                        <button class="button"> <a class="button_a" href="index.html">Ingresar</a></button>
-
+                        <img th:src="@{/img/Admin-Profile-PNG.png}" alt="">
+                            <div class="contenido-texto-card">
+                                <h4>Ingrese su Usuario</h4>
+                                <input type="text" id="usuario" name="usuario" required
+                                       minlength="0" maxlength="15" size="20">
+                                <h4>Contraseña</h4>
+                                <input type="password" id="contrasena" name="contrasena" required
+                                       minlength="0" maxlength="25" size="20">
+                            </div>
+                            <button id="botonInicio" onclick="enviarDatos();" class="button">Ingresar</button>
                     </div>
 
             </section>

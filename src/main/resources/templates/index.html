@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tienda ancestral</title>
-    
-    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link th:href="@{/css/estilos.css}" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="comunidad.html">Acerca de la comunidad</a>
-            <a href="medicamentos.html">Medicamentos</a>
-            <a href="artesanias.html">Artesanías</a>
-            <a href="alimentos.html">Alimentos</a>
-            <a href="#">Inicia sesión</a>
-        </nav>
         <section class="textos-header">
             <h1>Tienda Ancestral</h1>
             <h2></h2>
@@ -35,7 +26,7 @@
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">¿Qué es la tienda ancestral?</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="../static/img/embera-choco.jpg" alt="" class="imagen-about-us">
+                <img th:src="@{/img/embera-choco.jpg}" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span>1</span>¿Por qué lo hacemos?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
@@ -52,17 +43,17 @@
             <h2 class="titulo">Inicie sesión</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="img/carrito1.png" alt="">
+                    <img th:src="@{/img/carrito1.png}" alt="">
                     <div class="contenido-texto-card">
                         <h4>Usuario</h4>
-                        <button class="button"> <a class="button_a" href="index.html">Ingresar</a></button>
+                        <button class="button"> <a class="button_a" th:href="@{/cliente/iniciarSesion}">Ingresar</a></button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/Admin-Profile-PNG.png" alt="">
+                    <img th:src="@{/img/Admin-Profile-PNG.png}" alt="">
                     <div class="contenido-texto-card">
                         <h4>Administrador</h4>
-                        <button class="button"> <a class="button_a" href="index.html">Ingresar</a></button>
+                        <button class="button"> <a class="button_a" th:href="@{/admin/iniciarSesion}">Ingresar</a></button>
                     </div>
                 </div>
             </div>
