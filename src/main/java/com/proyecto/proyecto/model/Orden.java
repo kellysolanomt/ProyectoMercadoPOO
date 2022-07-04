@@ -28,7 +28,6 @@ public class Orden {
     private long id;
     @Column(name="fecha_orden")
     private Date fechaOrden;
-    @Column(name="lista_productos")
     private List<Producto> productos;
     
     @ManyToOne()
