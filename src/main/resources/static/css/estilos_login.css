@@ -27,7 +27,7 @@ body {
 
 header {
     width: 100%;
-    height: 600px;
+    height: 100px;
     background: #bc4e9c;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/Embera.jpeg);
@@ -215,11 +215,12 @@ main .sobre-nosotros{
     padding-top: 5px;
 }
 .button {
-    margin-top: 10%;
+   margin-right: 5%;
+   margin-bottom: 5%;
     background-color: #ffffff; 
     border: none;
     color: rgb(255, 1, 1);
-    padding: 15px 32px;
+    padding: 7px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -237,7 +238,7 @@ main .sobre-nosotros{
 .cards .card_login{
     background: #df2020;
     display: flex;
-    width: 46%;
+    width: 50%;
     height: 150px;
     align-items: center;
     justify-content: space-evenly;
@@ -246,6 +247,7 @@ main .sobre-nosotros{
 }
 
     .cards .card_login img{
+        margin-left: 2%;
         width: 100px;
         height: 100px;
         object-fit: fill;
@@ -255,6 +257,7 @@ main .sobre-nosotros{
     }
     
     .cards .card_login > .contenido-texto-card{
+        margin-left: 4%;
         width: 60%;
         color: #fff;
     }
