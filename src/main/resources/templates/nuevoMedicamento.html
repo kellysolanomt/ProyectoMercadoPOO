@@ -45,35 +45,21 @@
             <section class="portafolio">
                 <div class="contenedor">
                     <h2 class="titulo">Nuevo medicamento</h2>
+                    
                     <form th:action="@{/medicamentosAdmin/guardarMedicamento}" method="post">
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">Referencia</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput" name="referencia" placeholder="Escriba la referencia del medicamento">
-                        </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" placeholder="Escriba el nombre del medicamento">
-                        </div>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput3" class="form-label">Origen</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del medicamento">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput4" class="form-label">Precio</label>
                             <input type="number" class="form-control" id="formGroupExampleInput3" name="precio" placeholder="Escriba el precio del medicamento">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput5" class="form-label">Cantidad</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" placeholder="Escriba la cantidad de medicamento">
+                            <label for="formGroupExampleInput3" class="form-label">Origen</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del medicamento">
                         </div>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput6" class="form-label">Dosis</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput5" name="dosis" placeholder="Escriba la dosis del medicamento">
-                        </div>
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput7" class="form-label">Tipo</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" placeholder="Escriba el tipo de medicamento">
-                        </div>
+                        
                         <div class="mb-3">
                             <label for="formGroupExampleInput8" class="form-label">Imagen url</label>
                             <div class="input-group mb-3">
@@ -81,9 +67,20 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput7" name="imagen" placeholder="Escriba la ruta de la imagen del medicamento">
                             </div>
                         </div>
-                        <buttom type="submit" class="btn btn-success">
-                            Guardar
-                        </buttom>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput5" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" placeholder="Escriba la cantidad de medicamento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput7" class="form-label">Tipo</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" placeholder="Escriba el tipo de medicamento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput6" class="form-label">Dosis</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput5" name="dosis" placeholder="Escriba la dosis del medicamento">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Guardar</button>
                     </form>
                 </div>
             </section>

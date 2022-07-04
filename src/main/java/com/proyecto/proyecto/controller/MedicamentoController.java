@@ -42,6 +42,7 @@ public class MedicamentoController {
     @PostMapping("/guardarMedicamento")
     public String guardarMedicamento(Medicamento medicamento){
         logg.info("Informacion del objeto medicamento, {}",medicamento);
-        return "medicamentosAdmin";
+        medicamentoRepository.save(medicamento);
+        return "redirect:/medicamentosAdmin";
     }
 }
