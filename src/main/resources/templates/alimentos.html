@@ -8,6 +8,7 @@
         <title>Tienda ancestral</title>
         <script th:src="@{/js/js.js}"></script>
         <link th:href="@{/css/estilos_medicamentos.css}" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
     </head>
 
@@ -44,24 +45,24 @@
                     <div class="contenido-textos">
                         <h3>Alimentos tradicionales y naturales</h3>
                         <p>Entre los productos agrícolas que se siembran en el territorio Embera Chamí de
-                        Risaralda predomina los cultivos de pan coger para el consumo interno como
-                        el plátano, yuca, frijol, maíz y frutales, que se combinan con productos de café
-                        y cacao para la comercialización. El café es un cultivo frecuente debido a las
-                        condiciones del clima y de los suelos y a la incidencia de la población mestiza
-                        en las comunidades indígenas, en la que por lo general se dedica a acumular
-                        excedentes de la producción de café para su comercialización, lo cual ha
-                        conllevado a perder de forma periódica muchas de las costumbres tradicionales
-                        de producción de alimentos y ha conllevando a bajar la seguridad nutricional.
-                        En estos municipios, también se siembra caña panelera, plátano, yuca, cítricos,
-                        tomate de árbol y cultivos de clima frío como es el caso de Guática.</p>
+                            Risaralda predomina los cultivos de pan coger para el consumo interno como
+                            el plátano, yuca, frijol, maíz y frutales, que se combinan con productos de café
+                            y cacao para la comercialización. El café es un cultivo frecuente debido a las
+                            condiciones del clima y de los suelos y a la incidencia de la población mestiza
+                            en las comunidades indígenas, en la que por lo general se dedica a acumular
+                            excedentes de la producción de café para su comercialización, lo cual ha
+                            conllevado a perder de forma periódica muchas de las costumbres tradicionales
+                            de producción de alimentos y ha conllevando a bajar la seguridad nutricional.
+                            En estos municipios, también se siembra caña panelera, plátano, yuca, cítricos,
+                            tomate de árbol y cultivos de clima frío como es el caso de Guática.</p>
 
                     </div>
                 </div>
             </section>
             <section class="portafolio">
                 <h2 class="titulo">Catálogo de medicamentos</h2>
-                <div class="contenedor-sobre-nosotros">
-				<table class="table">
+                <div class="container">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">Imagen</th>
@@ -86,12 +87,12 @@
                                 <td th:text="${alimento.fechaVencimiento}"></td>
                                 <td th:text="${alimento.listoParaConsumir}"></td>
                                 <td th:text="${alimento.origenAnimal}"></td>
-                                <td><a href="" class="btn btn-primary">Comprar</a></td>
-                                
+                                <td><a class="btn btn-primary">Comprar</a></td>
+
                             </tr>
                         </tbody>
                     </table>
-                
+
                 </div>
             </section>
 
@@ -100,11 +101,12 @@
                 <div class="contenedor-footer">
                     <div class="content-foo">
                         <h4>Teléfono</h4>
-                        <p>13456</p>
+                        <p>8296312</p>
                     </div>
                     <div class="content-foo">
                         <h4>Email</h4>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>juarodriguezgo@unal.edu.co</p>
+                        <p>ksolanoc@unal.edu.co</p>
                     </div>
 
                 </div>

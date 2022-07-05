@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Tienda ancestral</title>
-    
+    <script th:src="@{/js/js.js}"></script>
     <link rel="stylesheet" th:href="@{/css/estilos.css}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
 </head>
@@ -14,12 +14,21 @@
 <body>
     <header>
         <nav>
-            <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
-                <a th:ref="@{/cliente/comunidad}">Acerca de la comunidad</a>
+                <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
+                <a th:href="@{/cliente/comunidad}">Acerca de la comunidad</a>
                 <a th:href="@{/medicamentos/cliente}">Medicamentos</a>
                 <a th:href="@{/artesanias/cliente}">Artesanías</a>
                 <a th:href="@{/alimentos/cliente}">Alimentos</a>
-        </nav>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn"><strong>CLIENTE</strong></button>
+                    <div class="dropdown-content">
+                        <a><img th:src="@{/img/perfil.png}" height="80" width="80"></a>
+                        <a id="userField">User</a>
+                        <a th:href="@{/cliente/iniciarSesion}">Salir</a>
+                    </div>
+
+                </div>
+            </nav>
         <section class="textos-header">
             <h1>Los Embera Chami</h1>
             <h2></h2>
@@ -130,7 +139,8 @@
             </div>
             <div class="content-foo">
                 <h4>Email</h4>
-                <p>8296312</p>
+                <p>juarodriguezgo@unal.edu.co</p>
+                <p>ksolanoc@unal.edu.co</p>
             </div>
             
         </div>
