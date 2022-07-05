@@ -14,12 +14,20 @@
     <body>
         <header>
             <nav>
-                <a href="index.html">Inicio</a>
-                <a href="comunidad.html">Acerca de la comunidad</a>
-                <a href="medicamentos.html">Medicamentos</a>
-                <a href="artesanias.html">Artesanías</a>
-                <a href="alimentos.html">Alimentos</a>
-                <a href="#">Inicia sesión</a>
+                <a th:href="@{/admin/homeAdmin}">Inicio</a>
+                <a th:href="@{/medicamentosAdmin}">Medicamentos</a>
+                <a th:href="@{/artesaniasAdmin}">Artesanías</a>
+                <a th:href="@{/alimentosAdmin}">Alimentos</a>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn"><strong>Usuario</strong></button>
+                    <div class="dropdown-content">
+                        <a><img src="../static/img/perfil.png" height="80" width="80"></a>
+                        <a>User</a> 
+                        <a>example@gmail.com</a>
+                        <a th:href="@{/logInAdmin}">Salir</a>
+                    </div>
+                    
+                </div>
             </nav>
 
             <div class="wave" style="height: 50px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"

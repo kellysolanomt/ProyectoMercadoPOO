@@ -33,16 +33,17 @@ public abstract class Usuario {
     private String contraseña;
     @Column(name="usuario")
     private String usuario;
-    
-    public Usuario() {
-        super();
-    }
 
-    public Usuario(long id, String nombre, String correo, String contraseña) {
+    public Usuario(long id, String nombre, String correo, String contraseña, String usuario) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
+        this.usuario = usuario;
+    }
+
+    public Usuario() {
+        super();
     }
 
     public long getId() {
@@ -77,8 +78,20 @@ public abstract class Usuario {
         this.contraseña = contraseña;
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + '}';
+        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + ", usuario=" + usuario + '}';
     }
+    
+    
+    
+    
 }

@@ -14,16 +14,16 @@
     <body>
         <header>
             <nav>
-                <a href="index.html">Inicio</a>
+                <a th:href="@{/admin/homeAdmin}">Inicio</a>
                 <a th:href="@{/medicamentosAdmin}">Medicamentos</a>
                 <a th:href="@{/artesaniasAdmin}">Artesanías</a>
                 <a th:href="@{/alimentosAdmin}">Alimentos</a>
                 <div class="dropdown" style="float:right;">
                     <button class="dropbtn"><strong>Usuario</strong></button>
                     <div class="dropdown-content">
-                        <a><img src="../static/img/perfil.png" height="80" width="80"></a>
-                        <a>User</a>
-                        <a>example@gmail.com</a>
+                        <a><img th:src="@{/img/perfil.png}" height="80" width="80"></a>
+                        <p th:text="${administradorEncontrado.usuario}"></p>
+                        <p th:text="${administradorEncontrado.correo}"></p>
                         <a th:href="@{/logInAdmin}">Salir</a>
                     </div>
                     

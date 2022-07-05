@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tienda ancestral</title>
-    
-    <link th:href="@{/css/estilos_artesanias.css}" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tienda ancestral</title>
 
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="comunidad.html">Acerca de la comunidad</a>
-            <a href="medicamentos.html">Medicamentos</a>
-            <a href="artesanias.html">Artesanías</a>
-            <a href="alimentos.html">Alimentos</a>
-            <a href="#">Inicia sesión</a>
-        </nav>
-        
-        <div class="wave" style="height: 50px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: rgb(247, 127, 127);"></path>
-            </svg></div>
-    </header>
-    <main>
-        <section class="contenedor sobre-nosotros">
-            <h2 class="titulo">Artesanías</h2>
-            <div class="contenedor-sobre-nosotros">
-                <img src="../static/img/artesanias1.jpg" alt="" class="imagen-about-us">
-                <div class="contenido-textos">
-                    <h3>Tradición hecha a medida</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                        velit doloribus laboriosam ut.</p>
-                    
+        <link th:href="@{/css/estilos_artesanias.css}" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a th:href="@{/admin/homeAdmin}">Inicio</a>
+                <a th:href="@{/medicamentosAdmin}">Medicamentos</a>
+                <a th:href="@{/artesaniasAdmin}">Artesanías</a>
+                <a th:href="@{/alimentosAdmin}">Alimentos</a>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn"><strong>Usuario</strong></button>
+                    <div class="dropdown-content">
+                        <a><img th:src="@{/img/perfil.png}" height="80" width="80"></a>
+                        <a>User</a>
+                        <a>example@gmail.com</a>
+                        <a th:href="@{/logInAdmin}">Salir</a>
+                    </div>
+
                 </div>
-            </div>
-        </section>
-        <section class="portafolio">
-            <h2 class="titulo">Catálogo de Artesanías</h2>
-             <div class="container">
+            </nav>
+
+            <div class="wave" style="height: 50px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                           style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                      style="stroke: none; fill: rgb(247, 127, 127);"></path>
+                </svg></div>
+        </header>
+        <main>
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">Artesanías</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img th:src="@{/img/artesanias1.jpg}" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <h3>Tradición hecha a medida</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                            velit doloribus laboriosam ut.</p>
+
+                    </div>
+                </div>
+            </section>
+            <section class="portafolio">
+                <h2 class="titulo">Catálogo de Artesanías</h2>
+                <div class="container">
                     <a th:href="@{/artesaniasAdmin/create}" class="btn btn-primary">Nueva artesanía</a>
                     <table class="table">
                         <thead>
@@ -78,22 +86,22 @@
                         </tbody>
                     </table>
                 </div>
-        </section>
-        
-        
-    <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>Teléfono</h4>
-                <p>13456</p>
-            </div>
-            <div class="content-foo">
-                <h4>Email</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            
-        </div>
-    </footer>
-</body>
+            </section>
+
+
+            <footer>
+                <div class="contenedor-footer">
+                    <div class="content-foo">
+                        <h4>Teléfono</h4>
+                        <p>13456</p>
+                    </div>
+                    <div class="content-foo">
+                        <h4>Email</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                </div>
+            </footer>
+    </body>
 
 </html>

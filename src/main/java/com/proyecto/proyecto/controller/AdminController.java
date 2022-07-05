@@ -50,22 +50,18 @@ public class AdminController{
     }
     
     @GetMapping("/{usuario}/{contraseña}")
-    public String logueo(@PathVariable("usuario") String usuario, @PathVariable("contraseña") String contraseña){
+    public String logueo(@PathVariable("usuario") String usuario, @PathVariable("contraseña") String contraseña, Model model){
         Admin administradorEncontrado = autenticar(usuario, contraseña);
-        if(administradorEncontrado.getNombre().isEmpty()){
-            return "No encontrado";
+        if(administradorEncontrado.getNombre()==null){
+            return "redirect:/admin/iniciarSesion";
         }else{
-            String usuarioEncontrado = administradorEncontrado.getNombre();
-            String correoEncontrado = administradorEncontrado.getCorreo();
-            return "redirect:/admin/homeAdmin";
+            model.addAttribute("administradorEncontrado", administradorEncontrado);
+            System.out.println(administradorEncontrado.getUsuario());
+            return "homeAdmin";
         }
         
     }
     
-    @GetMapping("/homeAdmin")
-    public String homeAdmin(){
-        return "homeAdmin";
-    }
     
     
 }
