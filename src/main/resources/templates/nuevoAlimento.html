@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Tienda ancestral</title>
         <script th:src="@{/js/js.js}"></script>
-        <link th:href="@{/css/estilos_medicamentos.css}" rel="stylesheet"/>
+        <link th:href="@{/css/estilos_alimentos.css}" rel="stylesheet"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
     </head>
@@ -37,7 +37,7 @@
         </header>
         <main>
             <section class="contenedor sobre-nosotros">
-                <h2 class="titulo">Medicamentos</h2>
+                <h2 class="titulo">Alimentos</h2>
                 <div class="contenedor-sobre-nosotros">
                     <img th:src="@{/img/plantaciones.jpg}" alt="" class="imagen-about-us">
                     <div class="contenido-textos">
@@ -51,36 +51,36 @@
             </section>
             <section class="portafolio">
                 <div class="contenedor">
-                    <h2 class="titulo">Nuevo medicamento</h2>
+                    <h2 class="titulo">Nuevo alimento</h2>
                     
-                    <form th:action="@{/medicamentos/guardarMedicamento}" method="post">
+                    <form th:action="@{/alimentos/guardarAlimento}" method="post">
                         <div class="mb-3">
                             <label for="formGroupExampleInput2" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" placeholder="Escriba el nombre del medicamento">
+                            <input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" placeholder="Escriba el nombre del alimento">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput4" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput3" name="precio" placeholder="Escriba el precio del medicamento">
+                            <input type="number" class="form-control" id="formGroupExampleInput3" name="precio" placeholder="Escriba el precio del alimento">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput3" class="form-label">Origen</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del medicamento">
+                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del alimento">
                         </div>
                         
                         <div class="mb-3">
                             <label for="formGroupExampleInput8" class="form-label">Imagen url</label>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Ej: miel.jpg</span>
-                                <input type="text" class="form-control" id="formGroupExampleInput7" name="imagen" placeholder="Escriba la ruta de la imagen del medicamento">
+                                <input type="text" class="form-control" id="formGroupExampleInput7" name="imagen" placeholder="Escriba la ruta de la imagen del alimento">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput5" class="form-label">Cantidad</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" placeholder="Escriba la cantidad de medicamento">
+                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" placeholder="Escriba la cantidad de alimento">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput7" class="form-label">Tipo</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" placeholder="Escriba el tipo de medicamento">
+                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" placeholder="Escriba el tipo de alimento">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput6" class="form-label">Dosis</label>
@@ -109,3 +109,4 @@
     </body>
 
 </html>
+

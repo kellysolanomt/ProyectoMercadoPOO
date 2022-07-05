@@ -52,7 +52,7 @@
             <section class="portafolio">
                 <h2 class="titulo">Catálogo de medicamentos</h2>
                 <div class="container">
-                    <a th:href="@{/medicamentosAdmin/nuevoMedicamento}" class="btn btn-primary">Nuevo medicamento</a>
+                    <a th:href="@{/medicamentos/nuevoMedicamento}" class="btn btn-primary">Nuevo medicamento</a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -78,8 +78,8 @@
                                 <td th:text="${medicamento.cantidad}"></td>
                                 <td th:text="${medicamento.tipo}"></td>
                                 <td th:text="${medicamento.dosis}"></td>
-                                <td><a th:href="@{/medicamentosAdmin/editarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-warning">Editar</a></td>
-                                <td><a th:href="@{/medicamentosAdmin/borrarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-danger">Eliminar</a></td>
+                                <td><a th:href="@{/medicamentos/editarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-warning">Editar</a></td>
+                                <td><a th:href="@{/medicamentos/borrarMedicamento/{referencia}(referencia=${medicamento.referencia}) }" class="btn btn-danger">Eliminar</a></td>
                             </tr>
                         </tbody>
                     </table>

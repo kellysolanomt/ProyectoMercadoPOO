@@ -50,7 +50,7 @@ public class MedicamentoController {
     public String guardarMedicamento(Medicamento medicamento){
         logg.info("Informacion del objeto medicamento, {}",medicamento);
         medicamentoRepository.save(medicamento);
-        return "redirect:/medicamentosAdmin";
+        return "redirect:/medicamentos/admin";
     }
     
     @GetMapping("/editarMedicamento/{referencia}")
@@ -66,7 +66,7 @@ public class MedicamentoController {
         Medicamento medi = medicamentoRepository.getOne(referencia);
         logg.info("Objeto eliminado {}",medi);
         medicamentoRepository.delete(medi);
-        return "redirect:/medicamentosAdmin";
+        return "redirect:/medicamentos/admin";
     }
     
     

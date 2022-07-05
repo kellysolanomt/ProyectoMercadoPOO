@@ -31,6 +31,11 @@ public class ClienteController {
         return "";
     }
     
+    @GetMapping("/comunidad")
+    public String mostrarComunidad(){
+        return "comunidad";
+    }
+    
     @GetMapping("/iniciarSesion")
     public String iniciarSesion(){
         return "logInUsuario";

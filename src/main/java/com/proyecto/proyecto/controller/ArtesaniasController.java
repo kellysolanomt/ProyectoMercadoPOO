@@ -45,16 +45,16 @@ public class ArtesaniasController {
 	}
 
 	
-	@GetMapping("/create")//http://localhost:8080/artesaniasAdmin/create
-    public String create() {
-		return "nuevoArtesania";
+	@GetMapping("/nuevaArtesania")//http://localhost:8080/artesaniasAdmin/create
+            public String crearArtesania() {
+            return "nuevoArtesania";
 	}
 	
 	@PostMapping("/guardarArtesania")
 	public String guardarArtesania(Artesania artesania){
 		logg.info("Información del producto, {}", artesania);
 		artesaniaRepository.save(artesania);
-		return "redirect:/artesaniasAdmin";
+		return "redirect:/artesanias/admin";
 	}
 	
 	@GetMapping("/editarArtesania/{referencia}")
@@ -70,7 +70,7 @@ public class ArtesaniasController {
 		Artesania p= artesaniaRepository.getOne(referencia);
 		logg.info("Objeto eliminado {}", p);
 		artesaniaRepository.delete(p);
-		return "redirect:/artesaniasAdmin";
+		return "redirect:/artesanias/admin";
 	}
 	
 	
