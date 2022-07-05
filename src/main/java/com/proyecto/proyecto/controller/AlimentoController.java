@@ -57,7 +57,7 @@ public class AlimentoController {
         Alimento alim = alimentoRepository.getOne(referencia);
         logg.info("Objeto recuperado {}",alim);
         model.addAttribute("alimento",alim);
-        return "actualizarAlimento";
+        return "editarAlimento";
     }
     
     @GetMapping("/borrarAlimento/{referencia}")

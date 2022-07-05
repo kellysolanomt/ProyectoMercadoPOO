@@ -41,7 +41,7 @@ public class MedicamentoController {
         return "medicamentos";
     }
     
-    @GetMapping("/nuevoMedicamento")//http://localhost:8080/medicamentosAdmin/create
+    @GetMapping("/nuevoMedicamento")
     public String crearMedicamento(){
         return "nuevoMedicamento";
     }
@@ -58,7 +58,7 @@ public class MedicamentoController {
         Medicamento medi = medicamentoRepository.getOne(referencia);
         logg.info("Objeto recuperado {}",medi);
         model.addAttribute("medicamento",medi);
-        return "actualizarMedicamento";
+        return "editarMedicamento";
     }
     
     @GetMapping("/borrarMedicamento/{referencia}")

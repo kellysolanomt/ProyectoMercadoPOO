@@ -19,8 +19,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="usu_cliente")
 public class Cliente extends Usuario{
+    
     @Column(name="cli_activo")
     private boolean estaActivo;
+    
     @OneToMany(mappedBy = "cliente", cascade=CascadeType.ALL, orphanRemoval = true)
     private List<Orden> ordenes;
 
