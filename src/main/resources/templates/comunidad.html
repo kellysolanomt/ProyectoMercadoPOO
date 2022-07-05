@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,11 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="comunidad.html">Acerca de la comunidad</a>
-            <a href="medicamentos.html">Medicamentos</a>
-            <a href="artesanias.html">Artesanías</a>
-            <a href="alimentos.html">Alimentos</a>
-            <a href="#">Inicia sesión</a>
+            <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
+                <a th:ref="@{/cliente/comunidad}">Acerca de la comunidad</a>
+                <a th:href="@{/medicamentos/cliente}">Medicamentos</a>
+                <a th:href="@{/artesanias/cliente}">Artesanías</a>
+                <a th:href="@{/alimentos/cliente}">Alimentos</a>
         </nav>
         <section class="textos-header">
             <h1>Los Embera Chami</h1>
@@ -35,7 +34,7 @@
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">¿Quienes son los Embera Chami</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="img/comunidad_1.jpg" alt="" class="imagen-about-us">
+                <img th:src="@{img/comunidad_1.jpg}" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span>1</span>¿Quiénes son?</h3>
                     <p>En tiempos prehispánicos los Embera se conocieron como indígenas “chocó” o
@@ -61,58 +60,58 @@
                 <h2 class="titulo">Galería</h2>
                 <div class="galeria-port">
                     <div class="imagen-port">
-                        <img src="img/Embera_good.jpg" alt="">
+                        <img th:src="@{img/Embera_good.jpg}" alt="">
                         <div class="hover-galeria" a href="">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/mujeres_embera.jpg" alt="">
+                        <img src="@{img/mujeres_embera.jpg}" alt="">
                         <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/niños_embera.jpg" alt="">
+                        <img src="@{img/niños_embera.jpg}" alt="">
                         <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/recolección.jpg" alt="">
+                        <img src="@{img/recolección.jpg}" alt="">
                         <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/mujeres_embera2.jpg" alt="">
+                        <img src="@{img/mujeres_embera2.jpg}" alt="">
                         <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/niños_2.jpg" alt="">
+                        <img src="@{img/niños_2.jpg}" alt="">
                         <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
+                            <img src="@{img/icono1.png}" alt="">
                             <p>Conoce más aquí</p>
                         </div>
                     </div>
                         <div class="imagen-port">
-                            <img src="img/Embera.jpeg" alt="">
+                            <img src="@{img/Embera.jpeg}" alt="">
                             <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
+                                <img src="@{img/icono1.png}" alt="">
                                 <p>Conoce más aquí</p>
                             </div>
                         </div>
                             <div class="imagen-port">
-                                <img src="img/ritual.jpg" alt="">
+                                <img src="@{img/ritual.jpg}" alt="">
                                 <div class="hover-galeria">
-                                    <img src="img/icono1.png" alt="">
+                                    <img src="@{img/icono1.png}" alt="">
                                     <p>Conoce más aquí</p>
                         </div>
                     
