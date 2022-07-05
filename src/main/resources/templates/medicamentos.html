@@ -16,7 +16,7 @@
         <header>
             <nav>
                 <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
-                <a th:ref="@{/cliente/comunidad}">Acerca de la comunidad</a>
+                <a th:href="@{/cliente/comunidad}">Acerca de la comunidad</a>
                 <a th:href="@{/medicamentos/cliente}">Medicamentos</a>
                 <a th:href="@{/artesanias/cliente}">Artesanías</a>
                 <a th:href="@{/alimentos/cliente}">Alimentos</a>
@@ -41,12 +41,17 @@
             <section class="contenedor sobre-nosotros">
                 <h2 class="titulo">Medicamentos</h2>
                 <div class="contenedor-sobre-nosotros">
-                    <img src="../static/img/plantaciones.jpg" alt="" class="imagen-about-us">
+                    <img th:src="@{/img/plantaciones.jpg}" alt="" class="imagen-about-us">
                     <div class="contenido-textos">
                         <h3>Una solución natural</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                            velit doloribus laboriosam ut.</p>
+                        <p>Ante la presencia de diferentes enfermedades el pueblo Embera Chami acude
+                        a los médicos tradicionales confiando en que sus conocimientos los curarían y
+                        ellos, de acuerdo a las diferentes sintomatologías, realizan el tratamiento
+                        adecuado para aliviar a los pacientes.
+                        Ante la presencia de diferentes enfermedades el pueblo Embera Chami acude
+                        a los médicos tradicionales confiando en que sus conocimientos los curarían y
+                        ellos, de acuerdo a las diferentes sintomatologías, realizan el tratamiento
+                        adecuado para aliviar a los pacientes.  </p>
 
                     </div>
                 </div>
