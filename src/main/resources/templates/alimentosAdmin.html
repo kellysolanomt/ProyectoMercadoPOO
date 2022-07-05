@@ -44,16 +44,16 @@
                     <div class="contenido-textos">
                         <h3>Alimentos tradicionales y naturales</h3>
                         <p>Entre los productos agrícolas que se siembran en el territorio Embera Chamí de
-                        Risaralda predomina los cultivos de pan coger para el consumo interno como
-                        el plátano, yuca, frijol, maíz y frutales, que se combinan con productos de café
-                        y cacao para la comercialización. El café es un cultivo frecuente debido a las
-                        condiciones del clima y de los suelos y a la incidencia de la población mestiza
-                        en las comunidades indígenas, en la que por lo general se dedica a acumular
-                        excedentes de la producción de café para su comercialización, lo cual ha
-                        conllevado a perder de forma periódica muchas de las costumbres tradicionales
-                        de producción de alimentos y ha conllevando a bajar la seguridad nutricional.
-                        En estos municipios, también se siembra caña panelera, plátano, yuca, cítricos,
-                        tomate de árbol y cultivos de clima frío como es el caso de Guática.</p>
+                            Risaralda predomina los cultivos de pan coger para el consumo interno como
+                            el plátano, yuca, frijol, maíz y frutales, que se combinan con productos de café
+                            y cacao para la comercialización. El café es un cultivo frecuente debido a las
+                            condiciones del clima y de los suelos y a la incidencia de la población mestiza
+                            en las comunidades indígenas, en la que por lo general se dedica a acumular
+                            excedentes de la producción de café para su comercialización, lo cual ha
+                            conllevado a perder de forma periódica muchas de las costumbres tradicionales
+                            de producción de alimentos y ha conllevando a bajar la seguridad nutricional.
+                            En estos municipios, también se siembra caña panelera, plátano, yuca, cítricos,
+                            tomate de árbol y cultivos de clima frío como es el caso de Guática.</p>
 
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             <section class="portafolio">
                 <h2 class="titulo">Catálogo de alimentos</h2>
                 <div class="container">
-                    <a href="" class="btn btn-primary">Nuevo alimento</a>
+                    <a th:href="@{/alimentos/nuevoAlimento}" class="btn btn-primary">Nuevo Alimento</a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -87,8 +87,8 @@
                                 <td th:text="${alimento.fechaVencimiento}"></td>
                                 <td th:text="${alimento.listoParaConsumir}"></td>
                                 <td th:text="${alimento.origenAnimal}"></td>
-                                <td><a href="" class="btn btn-warning">Editar</a></td>
-                                <td><a href="" class="btn btn-danger">Eliminar</a></td>
+                                <td><a th:href="@{/alimentos/editarAlimento/{referencia} (referencia=${alimento.referencia})}" class="btn btn-warning">Editar</a></td>
+                                <td><a th:href="@{/alimentos/borrarAlimento/{referencia} (referencia=${alimento.referencia})}" class="btn btn-danger">Eliminar</a></td>
                             </tr>
                         </tbody>
                     </table>
