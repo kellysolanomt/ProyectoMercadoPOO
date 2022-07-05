@@ -39,16 +39,6 @@
         <main>
             <section class="contenedor sobre-nosotros">
                 <h2 class="titulo">Alimentos</h2>
-                <div class="contenedor-sobre-nosotros">
-                    <img th:src="@{/img/plantaciones.jpg}" alt="" class="imagen-about-us">
-                    <div class="contenido-textos">
-                        <h3>Una solución natural</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                            velit doloribus laboriosam ut.</p>
-
-                    </div>
-                </div>
             </section>
             <section class="portafolio">
                 <div class="contenedor">
@@ -60,33 +50,41 @@
                             <input type="text" class="form-control" id="formGroupExampleInput2" name="nombre" placeholder="Escriba el nombre del alimento">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput3" class="form-label">Origen</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del alimento">
-                        </div>
-                        <div class="mb-3">
                             <label for="formGroupExampleInput4" class="form-label">Precio</label>
                             <input type="number" class="form-control" id="formGroupExampleInput3" name="precio" placeholder="Escriba el precio del alimento">
                         </div>
                         <div class="mb-3">
+
                             <label for="formGroupExampleInput4" class="form-label">Fecha de vencimiento</label>
                             <input type="text" class="form-control" datepicker="true" datepicker_format="YYYY-MM-DD" id="formGroupExampleInpateut4" name="fechaVencimiento" placeholder="Escriba la fecha de vencimiento del alimento 'YYYY-MM-DD'">
                         </div>
                         <div class="mb-3">
                             <label for="formGroupExampleInput4" class="form-label">¿Origen animal?</label>
                             <input type="text" class="form-control" id="formGroupExampleInput5" name="origenAnimal" placeholder="Escriba si es de origen animal el alimento">
+                            <label for="formGroupExampleInput3" class="form-label">Origen</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput3" name="origen" placeholder="Escriba el tipo de origen del alimento">
+
                         </div>
+                        
                         <div class="mb-3">
                             <label for="formGroupExampleInput8" class="form-label">Imagen url</label>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Ej: miel.jpg</span>
-                                <input type="text" class="form-control" id="formGroupExampleInput6" name="imagen" placeholder="Escriba la ruta de la imagen del alimento">
+                                <input type="text" class="form-control" id="formGroupExampleInput7" name="imagen" placeholder="Escriba la ruta de la imagen del alimento">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput4" class="form-label">Número de orden</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput7" name="orden_id" placeholder="Escriba el número de orden enlazado al alimento">
+                            <label for="formGroupExampleInput5" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="formGroupExampleInput4" name="cantidad" placeholder="Escriba la cantidad de alimento">
                         </div>
-                        
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput7" class="form-label">Tipo</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput6" name="tipo" placeholder="Escriba el tipo de alimento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput6" class="form-label">Dosis</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput5" name="dosis" placeholder="Escriba la dosis del medicamento">
+                        </div>
                         
                         <button type="submit" class="btn btn-success">Guardar</button>
                     </form>
