@@ -53,7 +53,9 @@ public class AdminController{
     public String logueo(@PathVariable("usuario") String usuario, @PathVariable("contraseña") String contraseña, Model model){
         Admin administradorEncontrado = autenticar(usuario, contraseña);
         if(administradorEncontrado.getNombre()==null){
+            System.out.println("No");
             return "redirect:/admin/iniciarSesion";
+            
         }else{
             model.addAttribute("administradorEncontrado", administradorEncontrado);
             System.out.println(administradorEncontrado.getUsuario());
@@ -61,6 +63,7 @@ public class AdminController{
         }
         
     }
+    
     
     
     

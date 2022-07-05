@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author kelly
  */
 @Controller
-@RequestMapping("/medicamentosAdmin")
+@RequestMapping("/medicamentos")
 public class MedicamentoController {
     
     private final Logger logg=LoggerFactory.getLogger(Medicamento.class);
@@ -29,10 +29,16 @@ public class MedicamentoController {
     @Autowired
     private MedicamentoRepository medicamentoRepository;
     
-    @GetMapping("")
+    @GetMapping("/admin")
     public String medicamentoAdmin(Model model){
         model.addAttribute("medicamentos", medicamentoRepository.findAll());
         return "medicamentosAdmin";
+    }
+    
+    @GetMapping("/cliente")
+    public String medicamentoCliente(Model model){
+        model.addAttribute("medicamentos", medicamentoRepository.findAll());
+        return "medicamentos";
     }
     
     @GetMapping("/nuevoMedicamento")//http://localhost:8080/medicamentosAdmin/create

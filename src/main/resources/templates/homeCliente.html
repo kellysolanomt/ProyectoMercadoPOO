@@ -14,16 +14,16 @@
     <body>
         <header>
             <nav>
-                <a onclick="recuperarUsuarioYContraseñaAdmin();">Inicio</a>
-                <a th:href="@{/medicamentos/admin}">Medicamentos</a>
-                <a th:href="@{/artesanias/admin}">Artesanías</a>
-                <a th:href="@{/alimentos/admin}">Alimentos</a>
+                <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
+                <a th:href="@{/medicamentos/cliente}">Medicamentos</a>
+                <a th:href="@{/artesanias/cliente}">Artesanías</a>
+                <a th:href="@{/alimentos/cliente}">Alimentos</a>
                 <div class="dropdown" style="float:right;">
-                    <button class="dropbtn"><strong>ADMIN</strong></button>
+                    <button class="dropbtn"><strong>CLIENTE</strong></button>
                     <div class="dropdown-content">
                         <a><img th:src="@{/img/perfil.png}" height="80" width="80"></a>
-                        <p th:text="${administradorEncontrado.usuario}"></p>
-                        <a th:href="@{/admin/iniciarSesion}">Salir</a>
+                        <p th:text="${clienteEncontrado.usuario}"></p>
+                        <a th:href="@{/cliente/iniciarSesion}">Salir</a>
                     </div>
                     
                 </div>
@@ -74,3 +74,4 @@
     </body>
 
 </html>
+

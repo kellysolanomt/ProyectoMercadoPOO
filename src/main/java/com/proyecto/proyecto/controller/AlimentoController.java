@@ -16,17 +16,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author kelly
  */
 @Controller
-@RequestMapping("/alimentosAdmin")//http:localhost:8080/alimentos
+@RequestMapping("/alimentos")//http:localhost:8080/alimentos
 public class AlimentoController {
     //se inyecta al controlador el objeto
     @Autowired
     private AlimentoRepository alimentoRepository;
     
-    @GetMapping("")
+    @GetMapping("/admin")
     public String alimentoAdmin(Model model){
         model.addAttribute("alimentos", alimentoRepository.findAll());
-        
         return "alimentosAdmin";
+    }
+    
+    @GetMapping("/cliente")
+    public String alimentoCliente(Model model){
+        model.addAttribute("alimentos", alimentoRepository.findAll());
+        return "alimentos";
     }
     
     @GetMapping("/create") //http://localhost:8080/alimentosAdmin/create

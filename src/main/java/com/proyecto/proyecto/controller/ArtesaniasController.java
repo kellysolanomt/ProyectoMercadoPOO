@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 * @author kelly
 */
 @Controller
-@RequestMapping("/artesaniasAdmin")//http:localhost:8080/artesaniasAdmin
+@RequestMapping("/artesanias")//http:localhost:8080/artesaniasAdmin
 public class ArtesaniasController {
 	
 	private final Logger logg= LoggerFactory.getLogger(Artesania.class);
@@ -32,11 +32,18 @@ public class ArtesaniasController {
 	@Autowired
 	private ArtesaniaRepository artesaniaRepository;
 	
-	@GetMapping("")
+	@GetMapping("/admin")
 	public String artesaniaAdmin(Model model) {
 		model.addAttribute("artesanias", artesaniaRepository.findAll());
 		return "artesaniasAdmin";
 	}
+        
+        @GetMapping("/cliente")
+	public String artesaniaCliente(Model model) {
+		model.addAttribute("artesanias", artesaniaRepository.findAll());
+		return "artesanias";
+	}
+
 	
 	@GetMapping("/create")//http://localhost:8080/artesaniasAdmin/create
     public String create() {
