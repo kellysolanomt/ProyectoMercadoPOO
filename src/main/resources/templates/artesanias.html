@@ -8,13 +8,16 @@
         <title>Tienda ancestral</title>
         <script th:src="@{/js/js.js}"></script>
         <link th:href="@{/css/estilos_artesanias.css}" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ 
     </head>
 
     <body>
         <header>
             <nav>
                 <a onclick="recuperarUsuarioYContraseñaCliente();">Inicio</a>
+                <a th:ref="@{/cliente/comunidad}">Acerca de la comunidad</a>
                 <a th:href="@{/medicamentos/cliente}">Medicamentos</a>
                 <a th:href="@{/artesanias/cliente}">Artesanías</a>
                 <a th:href="@{/alimentos/cliente}">Alimentos</a>
@@ -39,7 +42,7 @@
             <section class="contenedor sobre-nosotros">
                 <h2 class="titulo">Artesanías</h2>
                 <div class="contenedor-sobre-nosotros">
-                    <img src="../static/img/artesanias1.jpg" alt="" class="imagen-about-us">
+                    <img th:src="@{/img/artesanias1.jpg}" alt="" class="imagen-about-us">
                     <div class="contenido-textos">
                         <h3>Tradición hecha a medida</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
@@ -52,83 +55,37 @@
             <section class="portafolio">
                 <h2 class="titulo">Catálogo de Artesanías</h2>
                 <div class="contenedor-sobre-nosotros">
-
-                    <div class="galeria-port">
-                        <div class="imagen-port">
-                            <img src="../static/img/miel.jpg" alt="">
-
-                            <div class="hover-galeria">
-                                <img src="../static/img/carrito.png" alt="">
-                                <p>Comprar</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="contenido-textos">
-                        <h3>Producto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quis error dolores beatae autem!</p>
-                    </div>
-                </div>
-                <div class="contenedor-sobre-nosotros">
-                    <div class="imagen-port">
-                        <img src="../static/img/Tos.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="../static/img/carrito.png" alt="">
-                            <p>Comprar</p>
-                        </div>
-                    </div>
-                    <div class="contenido-textos">
-                        <h3>Producto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quis error dolores beatae autem!</p>
-                    </div>
-                </div>
-                <div class="contenedor-sobre-nosotros">
-                    <div class="imagen-port">
-                        <img src="../static/img/arnica.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="../static/img/carrito.png" alt="">
-                            <p>Comprar</p>
-                        </div>
-                    </div>
-                    <div class="contenido-textos">
-                        <h3>Producto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quis error dolores beatae autem!</p>
-                    </div>
-                </div>
-                <div class="contenedor-sobre-nosotros">
-                    <div class="imagen-port">
-                        <img src="../static/img/chontaduro.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="../static/img/carrito.png" alt="">
-                            <p>Comprar</p>
-                        </div>
-                    </div>
-                    <div class="contenido-textos">
-                        <h3>Producto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quis error dolores beatae autem!</p>
-                    </div>
-                </div>
-                <div class="contenedor-sobre-nosotros">
-                    <div class="imagen-port">
-                        <img src="../static/img/pomada.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="../static/img/carrito.png" alt="">
-                            <p>Comprar</p>
-                        </div>
-                    </div>
-                    <div class="contenido-textos">
-                        <h3>Producto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quis error dolores beatae autem!</p>
-                    </div>
-                </div>
-
-                </div>
-                </div>
-                </div>
-                <div>
-
-
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Referencia</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Origen</th>
+                                <th scope="col">Material</th>
+                                <th scope="col">Tipo de fabricación</th>
+                                <th scope="col">Color</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="artesania:${artesanias}">
+                                <td><img th:src="@{${'/img/'+ artesania.imagen}}" width="300px"></td>
+                                <td scope="row" th:text="${artesania.referencia}"></td>
+                                <td th:text="${artesania.nombre}"></td>
+                                <td th:text="${artesania.precio}"></td>
+                                <td th:text="${artesania.origen}"></td>
+                                <td th:text="${artesania.material}"></td>
+                                <td th:text="${artesania.tipoFabricacion}"></td>
+                                <td th:text="${artesania.color}"></td>
+                                <td><a th:href="#" class="btn btn-primary">Comprar</a></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                                  
                 </div>
             </section>
 
